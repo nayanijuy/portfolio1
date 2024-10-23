@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.container {
+  margin: 30px auto;
+  width: 580px;
+}
+
+.container p a img{
+  vertical-align: middle;
+}
+
+h1 {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+
+.section1 {
+  width: 580px;
+  height: 250px;
+  background-color: #336aea;
+  background-image: url(./1-1.png);
+  background-size: cover;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+
+.section1 h2 {
+  height: 250px;
+  padding-top: 95px;
+  text-align: center;
+  color: white;
+}
+
+.section2 {
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 23px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+.contents2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contents2 .box,
+.contents2 .box img {
+  text-align: center;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.contents2 .title {
+  color: #336aea;
+  font-weight: bold;
+}
+
+.contents2 .explain {
+  margin: 15px 0 10px;
+}
+
+.section3 {
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.contents3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contents3 .box {
+  padding-bottom: 20px;
+}
+
+.contents3 .box,
+.contents3 .box img {
+  text-align: center;
+  width: 150px;
+  font-weight: bold;
+}
+
+.section4 {
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.contents4 .box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contents4 .box + .box {
+  flex-direction: row-reverse;
+}
+
+.contents4 .box .txt,
+.contents4 .box img {
+  width: 240px;
+}
+.contents4 .box .txt {
+  padding-top: 55px;
+}
+
+.container .box .txt .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contents4 p a{
+    font-weight: bold;
+    color: #336aea;
+    border: 2px solid #336aea;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+
+.section5{
+    color: white;
+    background-color: #22244e;
+    margin: 30px auto;
+    /* padding: 30px; */
+    border-radius: 20px;
+}
+
+.section5 h2{
+  padding-top: 30px;
+}
+
+.section5 h2,.section5 p,.section5 a{
+  margin-left: 30px;
+}
+
+.section5 a{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.contents5 img{
+    width: 580px;
+    padding: 30px 0 30px;
+}
+
+.section6{
+  background-color: #fec73f;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.section6 h2{
+  padding-top: 30px;
+}
+
+.section6 h2,.section6 p{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.section6 p a{
+  font-weight: bold;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+
+
+/* 마진도 패딩도 없는데 왜 끝선이 안맞지???????????? */
+.contents6 a img{
+  width: 580px;
+  border-radius: 0 0 20px 20px;
+  padding-top: 8px;
+}
+
+footer{
+  text-align: center;
+}
+
+.sns img{
+  width: 20px;
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 8px;
+  margin-left: 5px;
+}
+
+.link{
+  margin: auto;
+  padding: 20px 0 30px;
+  width: 500px;
+  border-bottom: 1px solid;
+  text-decoration: underline;
+}
+
+.link a{
+padding-left: 13px;
+}
+
+.copyright{
+  padding: 30px;
+  letter-spacing: -1px;
+}
+
+.copyright p a{
+  color: blue;
+  text-decoration: underline;
+}

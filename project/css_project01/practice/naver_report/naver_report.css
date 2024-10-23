@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.wrap {
+  background-color: #f5f6f8;
+}
+
+header {
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.inner{
+    max-width: 1080px;
+    height: 56px;
+    margin: auto;
+}

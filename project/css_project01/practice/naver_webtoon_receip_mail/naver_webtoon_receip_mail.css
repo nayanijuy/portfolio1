@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e7e7e7;
+}
+.wrap {
+  margin: 20px auto;
+  width: 800px;
+}
+
+.figma a{
+  text-align: center;
+  font-size: 16px;
+}
+
+.figma a img{
+vertical-align: middle;
+}
+
+main{
+  background-color: #ffffff;
+  padding: 20px 23px;
+}
+
+.title {
+  margin: 40px 45px 20px;
+}
+
+.sub_title {
+  margin-left: 45px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sub_title span {
+  color: #00d564;
+}
+
+.txt {
+  margin-left: 45px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.txt span {
+  font-weight: bold;
+}
+
+.txt a {
+  color: black;
+  font-weight: bold;
+}
+
+table {
+  font-size: 14px;
+  margin-left: 45px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-top: 2px solid;
+  border-collapse: collapse;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+caption div {
+  display: inline;
+  font-size: 14px;
+}
+
+caption div span {
+  font-weight: lighter;
+}
+
+th {
+  background-color: #f8f8f8;
+}
+
+th,
+td {
+  padding: 5px 20px;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: left;
+}
+
+td a {
+  text-decoration: none;
+  color: #666666;
+}
+
+td:nth-of-type(4) {
+  color: #00d564;
+}
+td span {
+  font-weight: bold;
+}
+
+td {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+p a {
+  font-size: 14px;
+  display: block;
+  text-align: right;
+  color: gray;
+  margin-right: 45px;
+}
+
+.link {
+  margin-top: 55px;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: center;
+}
+
+.link_box {
+  margin-left: 13px;
+  padding: 10px 40px;
+  background-color: #00d564;
+}
+.link_box a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+footer{
+  text-align: center;
+  font-size: 13px;
+  color: gray;
+  letter-spacing: 1px;
+  line-height: 23px;
+}
+
+.mail_info{
+  margin: 40px auto;
+}
+
+.mail_info a{
+  color: #00d564;
+  text-decoration: none;
+}
+
+.copyright{
+  margin: 20px auto;
+  font-weight: bold;
+}

@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+/* 기존메뉴 일부수정 */
+.pf-menu li {
+  padding-right: 20px;
+}
+iframe {
+  box-sizing: border-box;
+}
+.pf-menu li.active{
+  font-weight: 800;
+  color: #646464;
+}
+/* 헤더 메뉴 */
+#header{
+  height: 60px;
+}
+.head-left .inbox{
+  color: #fff;
+  background-color: #646464;
+}
+.pf-menu li:hover .dept2{
+display: block;
+}
+.dept2 {
+  display: none;
+  position: absolute;
+  top: 42px;
+  min-width: 300px;
+  max-width: 580px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+}
+.dept2::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.6);
+}
+
+li:nth-child(1) .dept2{
+  width: 580px;
+  left: -168px;
+}
+li:nth-child(1) .dept2::before{
+  right: 55%;
+}
+li:nth-child(2) .dept2{
+  left: -76px;
+}
+li:nth-child(3) .dept2{
+  width: 547px;
+  left: -209px;
+}
+li:nth-child(4) .dept2{
+  width: 408px;
+  left: -133px;
+}
+li:nth-child(5) .dept2{
+  width: 580px;
+  left: -234px;
+}
+li:nth-child(6) .dept2{
+  width: 410px;
+  left: -138px;
+}
+.head-right .inbox{
+  padding: 3px 20px 3px 15px;
+  border-radius: 30px;
+}
+.head-right .ico{
+display: inline-block;
+width: 40px;
+height: 40px;
+margin-right: 5px;
+background-image: url(../imgs/about/ico/d6ec975d1.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+vertical-align: middle;
+}
+
+/* 페이지 바로 가져오기 - css 스타일링 */
+.pf03,
+.pf05,
+.pf06 {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+}
+.pf03 iframe,
+.pf06 iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 자바스크립트 미니프로젝트 */
+.pf04 ul.content {
+  width: 80%;
+  margin: 0 auto;
+}
+.pf04 .content li {
+  height: 900px;
+  padding-top: 80px;
+}
+.pf04 .content li iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.quick {
+  position: absolute;
+  right: 10%;
+  top: 100px;
+  border-radius: 15px;
+  border: 1px solid;
+  overflow: hidden;
+}
+.quick .tit {
+  width: 100%;
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+.quick ul {
+  padding: 10px;
+}
+
+/* 반응형 웹 구현 */
+.pf05 {
+  margin-top: 30px;
+  display: flex;
+  overflow-x: scroll;
+}
+.pf05 section {
+  flex-shrink: 0;
+  height: 80%;
+  width: 50%;
+  margin: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px;
+}
+.pf05 section .img_mask {
+  width: 100%;
+  height: 100%;
+}
+.pf05 section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pf05 section .txt {
+  display: none;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  min-width: 500px;
+  width: 80%;
+}
+.pf05 section .txt .tit {
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.pf05 section .txt span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.pf05 section .txt p{
+  margin-bottom: 10px;
+}
+.pf05 section:hover .img_mask::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 5s;
+}
+.pf05 section:hover .txt {
+  display: block;
+}
+
+/* about me */
+div.aboutme{
+  background-color: #333;
+}
+.aboutme div.inner-wrap{
+  padding-top: 0;
+  margin-top: 100px;
+  border-radius: 20px;
+}
+.aboutme .inner-wrap .inner{
+  padding: 50px 40px 50px;
+  height: auto;
+}
+.aboutme img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.aboutme .pic2 img {
+  object-fit: cover;
+  object-position: 0 -327px;
+}
+.aboutme .inner .group01 .intro .desc strong{
+  width: fit-content;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
+.aboutme .inner .group.group01 {
+  margin-bottom: 30px;
+}
+.aboutme .inner .group02 h1.desc{
+  font-size: 1.4rem;
+}
+.aboutme .inner .group.group02 div {
+  align-items: end;
+}
+.aboutme .inner .group02 dd.keyword span{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.skill span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+/* aboutme - 카드뒤집기 효과 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+.flip {
+  font-family: 'Pretendard';
+}
+.card {
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+  transition: .4s;
+  transform-style: preserve-3d;
+} 
+
+.front, .back {
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../imgs/about/ico/466ddec1a.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.front {
+  background: tomato; 
+}
+
+.back { 
+  transform: rotateY(180deg);
+}
+
+.aboutme .group01:hover .card {
+  transform: rotateY(180deg);
+}
+
+/* aboutme - 보더효과 */
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+.gradient-border {
+  --borderWidth: 5px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투두리스트</title>
+    <style>
+      .wrap{
+        width: fit-content;
+      }
+      .wrap,
+      fieldset,
+      h1,
+      label,
+      input {
+        margin: auto;
+        text-align: center;
+      }
+      fieldset, .todolist {
+        margin-top: 30px;
+        min-width: 500px;
+        max-width: 500px;
+        padding: 20px;
+        border: none;
+      }
+      h1 {
+        margin-bottom: 20px;
+        color: #fb9b00;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px;
+        width: 50%;
+        border: 3px solid #FFB743;
+      }
+      button {
+        text-indent: -9999px;
+        width: 50px;
+        height: 50px;
+        background-image: url(imgs/todo/free-icon-add-6318058.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .todolist{
+        background-image: url(imgs/todo/v602-nunoon-05-rippednotes.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px;
+      }
+      .todolist li{
+        list-style: none;
+        padding: 10px 0;
+      }
+      .todolist li:before{
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        background-image: url(imgs/todo/free-icon-pen-13294827.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- <form action="#" method="post"> -->
+      <fieldset>
+        <h1>To do List</h1>
+        <label for="text">오늘의 해야할 일을 적어주세요~!</label>
+        <input type="text" id="text" name="text" />
+        <button class="sumit" onclick="sumit()">추가하기</button>
+      </fieldset>
+      <!-- </form> -->
+      <ul class="todolist"></ul>
+    </div>
+    <script>
+      // 1. 투두리스트 입력 및 할일 추가
+      let todoList = document.getElementsByClassName("todolist")[0];
+
+      function sumit() {
+        // console.log(text);
+        let text = document.getElementById("text").value;
+        let li = document.createElement("li");
+        li.innerHTML = text;
+        todoList.prepend(li);
+      }
+
+      // 2. 리스트 작성된거 삭제
+    </script>
+  </body>
+</html>

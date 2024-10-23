@@ -1,0 +1,8 @@
+body{
+    background : rgb(255, 255, 225);
+    margin: 30px auto;
+    width: 50%;  
+}
+h1,footer{
+    text-align: center;
+}

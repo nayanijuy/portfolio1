@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보 게임</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      .df {
+        display: flex;
+      }
+
+      i {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      .com i {
+        background-image: url(imgs/rockscissorspaper/icon_bot.png);
+      }
+      .you i {
+        background-image: url(imgs/rockscissorspaper/icon_people.png);
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        box-shadow: 1px 1px 10px 0px;
+      }
+
+      .show,
+      .btns {
+        gap: 10px;
+        margin: auto;
+        justify-content: center;
+      }
+      .show {
+        gap: 30px;
+      }
+      .choice {
+        margin: 60px auto 20px;
+      }
+      .btns button {
+        text-indent: -9999px;
+        border: none;
+        width: 80px;
+        height: 80px;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+      }
+      .btns button:nth-child(1) {
+        background-image: url(imgs/rockscissorspaper/me_rock.jpg);
+      }
+      .btns button:nth-child(2) {
+        background-image: url(imgs/rockscissorspaper/me_scissors.jpg);
+      }
+      .btns button:nth-child(3) {
+        background-image: url(imgs/rockscissorspaper/me_paper.jpg);
+      }
+
+      .box {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .rock {
+        background-image: url(./imgs/rockscissorspaper/me_rock.jpg);
+      }
+      .scissors {
+        background-image: url(./imgs/rockscissorspaper/me_scissors.jpg);
+      }
+      .paper {
+        background-image: url(./imgs/rockscissorspaper/me_paper.jpg);
+      }
+
+      .pc_rock {
+        background-image: url(./imgs/rockscissorspaper/pc_rock.jpg);
+      }
+      .pc_scissors {
+        background-image: url(./imgs/rockscissorspaper/pc_scissors.jpg);
+      }
+      .pc_paper {
+        background-image: url(./imgs/rockscissorspaper/pc_paper.jpg);
+      }
+      .result {
+        margin: 60px auto 20px;
+      }
+      .result_img {
+        width: 100px;
+        height: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+      }
+      .win {
+        background-image: url(imgs/rockscissorspaper/free-icon-win-4372296.png);
+      }
+      .lose {
+        background-image: url(imgs/rockscissorspaper/free-icon-lose-4372342.png);
+      }
+      .same {
+        background-image: url(imgs/rockscissorspaper/free-icon-cheer-up-8036795.png);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>초초초 단순 가위바위보 게임!!!</h1>
+    <div class="show df">
+      <div class="com">
+        <p><i></i>computer</p>
+        <div class="computer box"></div>
+      </div>
+      <div class="you">
+        <p><i></i>you</p>
+        <div class="me box"></div>
+      </div>
+    </div>
+    <p class="choice">뭐 낼지 골라주세요!!!</p>
+    <div class="btns df">
+      <button onclick="btn(1)">rock</button>
+      <button onclick="btn(2)">scissors</button>
+      <button onclick="btn(3)">paper</button>
+    </div>
+    <div class="result"></div>
+    <div class="result_img"></div>
+    <script>
+      // 1=주먹  2=가위   3=보
+
+      const result = document.getElementsByClassName("result")[0];
+      const resultImg = document.getElementsByClassName("result_img")[0];
+      //result.innerHTML= "테스트";
+
+      let computer = document.getElementsByClassName("computer")[0];
+      let me = document.getElementsByClassName("me")[0];
+
+      function btn(num) {
+        const comNum = Math.floor(Math.random() * 3 + 1);
+        console.log(comNum);
+
+        if (num == 1) {
+          //주먹을 눌렀을때
+          me.classList.remove("scissors", "paper");
+          me.classList.add("rock");
+
+          if (comNum == 1) {
+            computer.classList.remove("pc_scissors", "pc_paper");
+            computer.classList.add("pc_rock");
+            result.innerHTML = "한번더~ 화이팅!!!!!";
+            resultImg.classList.remove('win','lose');
+            resultImg.classList.add('same');
+
+          } else if (comNum == 2) {
+            computer.classList.remove("pc_rock", "pc_paper");
+            computer.classList.add("pc_scissors");
+            result.innerHTML = "축하합니다~!";
+            resultImg.classList.remove('lose','same');
+            resultImg.classList.add('win');
+          } else if (comNum == 3) {
+            computer.classList.remove("pc_scissors", "pc_rock");
+            computer.classList.add("pc_paper");
+            result.innerHTML = "아쉽지만 다음 기회에~";
+            resultImg.classList.remove('win','same');
+            resultImg.classList.add('lose');
+          }
+        } else if (num == 2) {
+          //가위를 눌렀을때
+          me.classList.remove("rock", "paper");
+          me.classList.add("scissors");
+
+          if (comNum == 1) {
+            computer.classList.remove("pc_scissors", "pc_paper");
+            computer.classList.add("pc_rock");
+            result.innerHTML = "아쉽지만 다음 기회에~";
+            resultImg.classList.remove('win','same');
+            resultImg.classList.add('lose');
+          } else if (comNum == 2) {
+            computer.classList.remove("pc_rock", "pc_paper");
+            computer.classList.add("pc_scissors");
+            result.innerHTML = "한번더~ 화이팅!!!!!";
+            resultImg.classList.remove('win','lose');
+            resultImg.classList.add('same');
+          } else if (comNum == 3) {
+            computer.classList.remove("pc_scissors", "pc_rock");
+            computer.classList.add("pc_paper");
+            result.innerHTML = "축하합니다~!";
+            resultImg.classList.remove('lose','same');
+            resultImg.classList.add('win');
+          }
+        } else if (num == 3) {
+          //보를 눌렀을때
+          me.classList.remove("rock", "scissors");
+          me.classList.add("paper");
+
+          if (comNum == 1) {
+            computer.classList.remove("pc_scissors", "pc_paper");
+            computer.classList.add("pc_rock");
+            result.innerHTML = "축하합니다~!";
+            resultImg.classList.remove('lose','same');
+            resultImg.classList.add('win');
+          } else if (comNum == 2) {
+            computer.classList.remove("pc_rock", "pc_paper");
+            computer.classList.add("pc_scissors");
+            result.innerHTML = "아쉽지만 다음 기회에~";
+            resultImg.classList.remove('win','same');
+            resultImg.classList.add('lose');
+          } else if (comNum == 3) {
+            computer.classList.remove("pc_scissors", "pc_rock");
+            computer.classList.add("pc_paper");
+            result.innerHTML = "한번더~ 화이팅!!!!!";
+            resultImg.classList.remove('win','lose');
+            resultImg.classList.add('same');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

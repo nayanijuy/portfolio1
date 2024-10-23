@@ -1,0 +1,172 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+body, div, header, h1, h2, h3, h4, dl, dt, dd, ul, ol, li, p, fieldset, address { box-sizing:border-box; padding:0; margin:0 }
+strong, em, a, button, input { box-sizing:border-box }
+h1, h2, h3, h4, strong { font-weight:normal; font-size:1rem; }
+ul, ol, li { list-style:none }
+a { text-decoration:none }
+address { font-style:normal }
+fieldset { border:0 none }
+button { cursor:pointer }
+
+body { 
+    height:100vh;
+    font-family:"Noto Sans KR", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif; 
+    line-height:1.5; 
+    font-weight:300;
+    font-size:16px;
+    color:#666; 
+}
+
+.bg-on {
+    background: radial-gradient(circle, #3e4a57, #2d353c);
+}
+
+a, a:hover {
+    color:#666
+}
+
+img { vertical-align:top;}
+
+.hidden {
+    width:0; height:0;
+    line-height:0;
+    font-size:0;
+    text-indent:-9999px;
+}
+
+/* 스크롤바 기본 */
+::-webkit-scrollbar {
+    width:12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dadada;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* *** header *** */
+#wrapper {
+    min-width:1920px;
+    overflow-x:auto
+}
+
+/* notice */
+#wrapper .notice {
+    position:absolute;left:180px;top:0;
+    z-index:100;
+    width:80%;
+    padding-left:50px;
+    height:50px;
+    overflow:hidden;
+    line-height:50px;
+    font-weight:400;
+    background-color:#fff;
+}
+
+#wrapper .notice p {
+    position:relative;
+    font-size:1.1rem;
+}
+#wrapper .notice .cursor {
+    position:absolute; left:0; top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:20px;
+    background-color:#1a1a1a;
+    animation:blink 1s step-end infinite;
+}
+@keyframes blink {
+    50% { background-color:transparent; }
+}
+
+#header {
+    position:fixed; left:0; top:0;
+    z-index:50;
+    display:flex;
+    align-items:center;
+    width:100%;
+    min-width:1024px;
+    height:50px;
+    background-color:#fff;
+    box-shadow: 0 1px 5px 0 rgba(107, 119, 172, 0.2);
+}
+
+
+.head-left, .head-right {
+    padding:0 20px;
+}
+
+.head-right {
+    margin-left:auto
+}
+
+.inbox {
+    display:inline-block;
+    padding:5px 15px 5px 40px;
+    border-radius:20px;
+    font-weight:500;
+}
+
+.head-left .inbox {
+    color:#fff;
+    background:#4078ff url(../imgs/common/free-icon-menu-12314151.png) no-repeat 13px 8px;
+    background-size:20px 
+}
+
+.head-right .inbox {
+    cursor:pointer;
+    background-color:#e8e8e8
+}
+
+.head-right .inbox:hover, .head-right .inbox.active {
+    color:#e8e8e8;
+    background-color:#646464
+}
+
+
+/* 포트폴리오 메뉴 - 상단 */
+.pf-menu {
+    display:flex;
+    align-items:center;
+    gap:50px
+}
+.pf-menu li {
+    position:relative;
+    font-weight:400;
+    cursor:pointer;
+}
+
+.pf-menu li:nth-child(3), .pf-menu li:nth-child(4) {
+    padding-right:20px;
+}
+
+.pf-menu li.new-tab::after {
+    content:'';
+    position:absolute;right:0;bottom:0;
+    width:29px;
+    height:29px;
+    background:url(../imgs/common/icon-new-window.png) no-repeat 100% 8px;
+    background-size:19px
+}
+
+.pf-menu li.active {
+    font-weight:600;
+    color:#4078ff;
+}
+
+.pf-menu li.active a {
+    color:#4078ff
+}
+

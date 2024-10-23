@@ -1,0 +1,158 @@
+/* header */
+.header_change {
+  background-color: transparent;
+  color: white;
+  fill: white;
+}
+
+/* ========== main_wrap =============    
+====================================
+====================================*/
+.container > .main_wrap {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.main_info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main_slide {
+  width: 100%;
+  height: 100%;
+}
+
+.nicolas_dust_party_artist_talk{
+  display: none;
+}
+
+.main_slide.nicolas_dust_party {
+  background: url(../../imgs/hoam/bg_nicolasparty.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main_slide.nicolas_dust_party_artist_talk {
+  background: url(../../imgs/hoam/bg_artist_talk.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.info_card {
+  position: absolute;
+  box-sizing: border-box;
+  left: 3rem;
+  right: 3rem;
+  bottom: 8rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(248, 249, 253, 0.8);
+}
+
+.info_title{
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.info_sub{
+  padding-top: 1.5rem;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.scroll_icon {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  margin-left: -2.5rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--bg_hoam_6);
+  border-radius: 50%;
+}
+
+.scroll_icon>span {
+  display: block;
+  width: 3.5em;
+  height: 3.5rem;
+  margin: 0.8rem;
+  background-image: url(../../imgs/hoam/hoam_icon_scrolldown.svg);
+}
+
+/* ========== main_sub =============    
+====================================
+====================================*/
+.main_sub {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.main_sub section {
+  width: 80%;
+  margin: auto;
+  padding: 8rem 0 8rem;
+  text-align: center;
+  border-top: 1px solid var(--border_hoam_2);
+}
+
+.main_sub section h3 {
+  font-size: 2.6rem;
+  padding-bottom: 1.5rem;
+}
+
+.main_sub section .contents_form {
+  padding-top: 2rem;
+}
+
+.main_sub section .contents_form .txt_sub {
+  text-align: justify;
+}
+
+.main_sub section > ul{
+  padding: 2rem 0;
+}
+
+.main_sub section > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.main_sub section > ul > li > a>p:first-child{
+  padding-bottom: 0.5rem;
+}
+
+.main_sub section > ul > li{
+  border-top: 1px solid var(--border_hoam_2);
+}
+.main_sub section > ul > li:last-child{
+  border-bottom: 1px solid var(--border_hoam_2);
+}
+
+@media (min-width: 768px) {
+  .main_wrap .info_card{
+    width: 40%;
+    bottom: 3rem;
+  }
+  .main_sub section:first-child .contents_form {
+    width: 50%;
+  }
+  .main_sub section > ul > li > a {
+    flex-direction: row;
+  }
+  
+  .main_sub section > ul > li > a>p:first-child{
+    padding-bottom: 0;
+  }
+}

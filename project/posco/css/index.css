@@ -1,0 +1,462 @@
+@charset "UTF-8";
+/*************************************************
+********************* mobile *********************
+**************************************************/
+h3 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 50px 0;
+}
+/********************** section1 **********************/
+.section1 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.section1 h3 {
+  padding: 0;
+}
+
+.section1 .pc {
+  display: none;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .section1 .pc {
+    display: block;
+  }
+  .section1 .mo {
+    display: none;
+  }
+}
+
+/********************** section2 **********************/
+.section2 {
+  color: #fff;
+}
+
+.section2 > ul {
+  overflow: hidden;
+}
+
+.section2 > ul > li > .wrap {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  height: fit-content;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 20% 30px 30px;
+}
+
+.section2 > ul > li:nth-child(1) > .wrap {
+  background-image: url(../imgs/section2_business_visual1_m.jpg);
+}
+.section2 > ul > li:nth-child(2) > .wrap {
+  background-image: url(../imgs/section2_business_visual2_m.jpg);
+}
+.section2 > ul > li:nth-child(3) > .wrap {
+  background-image: url(../imgs/section2_business_visual3_m.png);
+}
+
+.section2 .wrap > div {
+  position: absolute;
+  top: 1000%;
+  left: 30px;
+  right: 30px;
+}
+
+.section2 .wrap > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.section2 h4 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.section2 .wrap .icon {
+  min-width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2 ul li a.wrap .icon span {
+  text-indent: -999999px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(-45deg);
+}
+
+.section2 p {
+  font-size: 22px;
+}
+@media (min-width: 940px) {
+  .section2 > ul {
+    display: flex;
+    min-height: 90vh;
+  }
+
+  .section2 > ul > li {
+    width: 33.33%;
+  }
+
+  .section2 > ul > li > a.wrap {
+    height: 100%;
+  }
+
+  .section2 .wrap > div {
+    top: 1000%;
+    left: 30px;
+    right: 30px;
+  }
+}
+
+/********************** section3 **********************/
+/* position을 사용한 슬라이드 */
+.section3 {
+  background-color: #f5f8ff;
+  overflow: hidden;
+  min-width: 670px;
+}
+
+.section3 h3 {
+  padding-bottom: 30px;
+}
+
+.section3 > p {
+  text-align: center;
+  font-size: 25px;
+}
+
+.section3 .wrap {
+  position: relative;
+  width: 75%;
+  max-width: 1028px;
+  margin: auto;
+}
+
+.section3 .card_wrap {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.section3 .card_wrap .card {
+  position: absolute;
+  left: 200%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+.section3 .card_wrap .card:first-child {
+  left: 0;
+}
+
+.section3 .card_wrap .card:nth-child(2) {
+  left: 100%;
+}
+
+.section3 .card_wrap .card:last-child {
+  left: -100%;
+}
+
+.section3 .card_wrap .card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section3 .card_wrap .card a img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section3 .card_wrap .card a .txt {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 30px;
+}
+
+.section3 .card_wrap .card a .txt .sep {
+  border: 1px solid #fff;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 35px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.section3 .card_wrap .card a .txt .tit {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section3 .btn button {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 8px 11px 26px 0px rgba(0, 0, 0, 0.34);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+}
+
+.section3 .btn button.prev {
+  left: -5px;
+}
+.section3 .btn button.next {
+  right: -5px;
+}
+
+@media (min-width: 1236px) {
+  .section3 .btn button {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    margin-top: -50px;
+  }
+}
+
+@media (min-width: 1075px) {
+  .section3 .card_wrap .card a .txt {
+    font-size: 16px;
+  }
+  .section3 .card_wrap .card a .txt .sep {
+    font-size: 18px;
+  }
+  .section3 .card_wrap .card a .txt .tit {
+    font-size: 35px;
+  }
+  .section3 .btn button {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    margin-top: -40px;
+  }
+}
+/********************** section4 **********************/
+.section4 {
+  padding: 0 30px;
+}
+
+.section4 a {
+  display: block;
+  height: 330px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section4 ul,
+.section4 li,
+.section4 a {
+  width: 100%;
+}
+
+.section4 li:nth-child(1) a {
+  background-image: url(../imgs/section4_main_esg_01.jpg);
+}
+.section4 li:nth-child(2) a {
+  background-image: url(../imgs/section4_main_esg_02.jpg);
+}
+.section4 li:nth-child(3) a {
+  background-image: url(../imgs/section4_main_esg_03.jpg);
+}
+.section4 li:nth-child(4) a {
+  background-image: url(../imgs/section4_main_esg_04.jpg);
+}
+
+.section4 li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section4 .tit {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 768px) {
+  .section4 ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .section4 ul li {
+    width: calc((100% - 5px) / 2);
+  }
+
+  .section4 li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+/********************** section5 **********************/
+.section5 {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.section5 > div > div {
+  width: 80%;
+  min-width: 407px;
+  max-width: 605px;
+  margin: auto;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section5 h4 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.section5 .ir,
+.section5 .recruitment {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0 100px;
+}
+
+.section5 .ir {
+  background-image: url(../imgs/section5_main_sec_09_bg.jpg);
+}
+
+.section5 .recruitment {
+  background-image: url(../imgs/section5_main_sec_10_bg.jpg);
+}
+
+.section5 .ir .irstock {
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.section5 .ir .irstock .wrap,
+.section5 .ir .irstock ul {
+  width: 50%;
+}
+
+.section5 .ir .irstock .wrap {
+  color: #a7c8ff;
+}
+
+.section5 .ir .irstock .wrap .count {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.section5 .ir .irstock .wrap span::before {
+  content: "";
+  display: inline-block;
+  margin: 0 5px 5px 8px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #a7c8ff;
+}
+
+.section5 .ir .irstock ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.section5 .ir .irstock ul li span:first-child {
+  color: #a7c8ff;
+}
+
+.section5 .ir > div > a,
+.recruitment > div > a {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #fff;
+  position: absolute;
+  bottom: -70px;
+}
+
+.section5 .ir > div > a::after,
+.recruitment > div > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../imgs/ico_finder_right_w.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section5 .recruitment p {
+  font-size: 25px;
+  margin-top: 165px;
+  max-width: 400px;
+}
+
+@media (min-width: 950px) {
+  .section5 {
+    flex-direction: row;
+  }
+
+  .section5 > div {
+    width: 50%;
+  }
+
+  .section5 .ir > div > a,
+  .recruitment > div > a {
+    width: 250px;
+    border-radius: 30px;
+  }
+}

@@ -1,0 +1,19 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+}
+section {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.leeum {
+  background-image: url(../../imgs/cover/cover_leeum_bg.jpg);
+}
+.hoam {
+  background-image: url(../../imgs/cover/cover_hoam_bg.jpg);
+}
+
+img {
+  height: 19px;
+}

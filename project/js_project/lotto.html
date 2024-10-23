@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또번호생성기</title>
+    <style>
+      body{
+        text-align: center;
+      }
+
+      h1, h2, p{
+        margin: 0;
+      }
+
+      h1 img{
+        width: 30px;
+        height: 30px;
+      }
+
+      .box{
+        border: 2px solid orange;
+        border-radius: 20px;
+        margin: 20px auto;
+        padding: 30px;
+        width: fit-content;
+      }
+
+      button{
+        background-color: rgb(185, 6, 162);
+        border-radius: 15px;
+        padding: 5px 10px;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+
+      .lotto{
+        width: 100%;
+        height: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>로또번호 생성기!!! <img src="imgs/lotto/icon_pocket.png" alt=""></h1>
+      <div>행운의 번호는????</div>
+      <button onclick="btn()">go go go~</button>
+      <div class="lotto"></div>
+    </div>
+    <div class="box">
+      <h2>Rule</h2>
+      <p>
+        선택시 : 1~45번까지 있고 6번 선택함.(겹치는 숫자없음. 공으로 생각하자.) <br />
+        추첨시 : 기본 번호 6개와 보너스번호 1개로 총 7개 발표됨.
+      </p>
+    </div>
+    <script>
+      const lotto = document.getElementsByClassName("lotto")[0]; // 로또번호 입력 공간
+      //lotto.innerHTML='메롱';
+
+      let lottoNum = []; // 생성된 로또번호를 기억해 놓을 배열
+      function btn() {
+        // 버튼을 눌렀을때
+        lottoNum = []; // 버튼을 누를때 일단 lottoNum의 배열을 비우고 시작(여러번 누를경우 누를때마다 이전 배열을 지워줌.)
+        for (let i = 1; i < 7; i++) {
+          // 아래의 행위를 6번 반복
+          let num = Math.floor(Math.random() * 45 + 1); // num은 45까지의 숫자를 랜덤으로 가져오되 정수만.
+          for (let j in lottoNum) {
+            // j는 lottoNum 안의 매개변수
+            if (num == lottoNum[j]) {
+              // j번째의 lottoNum이 num과 같을때
+              num = Math.floor(Math.random() * 45 + 1); // num은 45까지의 숫자를 랜덤으로 정수로 다시 가져옴.
+            }
+          }
+          lottoNum.push(num); // num들을 lottoNum 배열에 저장
+          lotto.innerText = lottoNum; // lottoNum을 lotto에 텍스트 입력
+        }
+      }
+    </script>
+  </body>
+</html>

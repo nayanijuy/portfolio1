@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호암미술관</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/hoam/main.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/hoam/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- fixed -->
+      <nav class="gnb_wrap">
+        <!-- pa, pc:df -->
+        <h1 class="logo deps1">
+          <span class="hidden">호암미술관입니다.</span>
+          <a href="#" class="hoam-logo">
+            <svg
+              class="hoam-emblem"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 110 13.75"
+              role="img"
+              aria-labelledby="titleHoam"
+              <title id="titleHoam">HOAM</title>
+              <path
+                d="M210.746,300.732h9.625v-3.094h-9.625Zm-3.094,3.781h3.094v-3.781h-3.094Zm-31.969-2.75h24.75v-4.125h-24.75Zm0,5.5v-5.5h-4.125v-4.125H166.4v4.3H132.715v-4.3h-5.156v13.75h5.156v-4.3H166.4v4.3h5.156v-4.125Zm24.75,0h-24.75v4.125h24.75Zm7.219,4.125v-6.875h-3.094v-2.75h-4.125v5.5h4.125v4.125Zm3.094-3.781h9.625v-3.094h-9.625Zm9.625-3.094h3.094v-3.781h-3.094Zm8.25,6.875V299.7h-2.063v4.813h-3.094v6.875ZM233.09,299.7H235.5v-2.062h-6.875V299.7h2.406v11.688h2.062Zm4.469,0H235.5v11.688h2.063Z"
+                transform="translate(-127.559 -297.638)"
+              ></path>
+            </svg>
+          </a>
+        </h1>
+        <h2 class="hidden">전체 메뉴</h2>
+        <ul class="gnb deps1">
+          <!-- m:none/pc:df -->
+          <li><a href="">방문안내</a></li>
+          <li>
+            <a href="">전시</a>
+            <ul class="deps2">
+              <li><a href="">현재전시</a></li>
+              <li><a href="">예정전시</a></li>
+              <li><a href="">과거전시</a></li>
+            </ul>
+          </li>
+          <li><a href="">프로그램</a></li>
+          <li><a href="">전통정원 희원</a></li>
+        </ul>
+        <ul class="utils deps1">
+          <!-- m:none/pc:df -->
+          <li><button>리움</button></li>
+          <li><button>ENG</button></li>
+          <li><button>로그인</button></li>
+          <li><button>회원가입</button></li>
+        </ul>
+      </nav>
+      <div class="custom">
+        <!-- pa -->
+        <p class="custom_header">안녕하세요? 호암미술관입니다.</p>
+        <div class="custom_main">
+          <p>
+            아래 옵션을 조정하여 오늘 나에게 꼭 맞는 탐색 환경을 만들어보세요.
+          </p>
+          <p>배경 색상</p>
+          <div class="background_color">
+            <button></button><button></button><button></button><button></button
+            ><button></button><button></button>
+          </div>
+          <p>글자 크기</p>
+          <div class="font_size">
+            <button></button><button></button><button></button>
+          </div>
+          <p>추천 옵션</p>
+          <div class="mode">
+            <button>기본</button><button>다크모드</button
+            ><button>에코모드</button><button>고대비모드</button>
+          </div>
+        </div>
+        <div class="custom_footer">
+          <!-- pr -->
+          <p>
+            최근 방문자가 가장 많이 검색한 키워드입니다. 클릭하면 해당 검색어로
+            이동합니다.
+          </p>
+          <button>희원</button><button>불교</button><button>연꽃처럼</button
+          ><button>셔틀버스</button>
+        </div>
+      </div>
+      <div class="menu">
+        <!-- pa -->
+        <!-- pa -->
+        <div class="menu_logo"></div>
+        <!-- pa -->
+        <form action="" method="get">
+          <fieldset class="search_box">
+            <!-- df -->
+            <label for="search" class="hidden">검색하기</label>
+            <div class="input_box">
+              <!-- pr -->
+              <input type="text" name="search" id="search" />
+              <button><i class="fa-regular fa-circle-xmark"></i></button
+              ><!-- pa -->
+            </div>
+            <button>검색</button>
+          </fieldset>
+        </form>
+        <div class="menu_detail">
+          <!-- df, pa -->
+          <ul>
+            <li><a href="">전시예약</a></li>
+            <li><a href="">리움호암 셔틀버스예약</a></li>
+            <li><a href="">온라인스토어</a></li>
+          </ul>
+          <ul class="menu_gnb"></ul>
+          <ul class="menu_link_menu"></ul>
+        </div>
+        <div class="menu_utils"></div>
+        <!-- pa -->
+      </div>
+    </header>
+    <div class="container">
+      <div class="main_wrap">
+        <!-- fixed -->
+        <div class="main_info">
+          <!-- pr -->
+          <h3 class="hidden">예정 전시</h3>
+          <div class="main_slide nicolas_dust_party">
+            <div class="info_card">
+              <!-- pa -->
+              <div class="info_title">니콜라스 파티 : 더스트</div>
+              <button>상세보기</button>
+              <div class="info_sub">
+                <p>전시실 1, 2</p>
+                <p>2024.08.31.~2025.01.19.</p>
+              </div>
+            </div>
+          </div>
+          <div class="main_slide nicolas_dust_party_artist_talk">
+            <div class="info_card">
+              <!-- pa -->
+              <div class="info_title">니콜라스 파티 : 더스트</div>
+              <button>상세보기</button>
+              <div class="info_sub">
+                <p>전시실 1, 2</p>
+                <p>2024.08.31.~2025.01.19.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll_icon"><span></span></div>
+      </div>
+      <div class="main_sub">
+        <!-- pa -->
+          <section>
+            <h3>배움·연구</h3>
+            <button>배움·연구 더보기</button>
+            <a href="" class="contents_form">
+              <div class="img_wrap">
+                <!-- pr -->
+                <img
+                  src="./imgs/hoam/bg_artist_talk.jpg"
+                  alt="니콜라스 파티 전시 연계 아티스트 토크"
+                />
+              </div>
+              <title>《니콜라스 파티: 더스트》 전시 연계 아티스트 토크</title>
+              <div class="txt_sub">
+                <p>토크</p>
+                <p>2024.08.30. ~ 2024.08.30.</p>
+              </div>
+            </a>
+          </section>
+          <section>
+            <h3>전통정원 희원</h3>
+            <button>전통정원 희원 더보기</button>
+            <a href="" class="contents_form">
+              <div class="img_wrap">
+                <img
+                  src="./imgs/hoam/heewon-img01.jpg"
+                  alt="전통정원 희원 사진"
+                />
+              </div>
+            </a>
+          </section>
+          <section>
+            <h3>공지</h3>
+            <button>공지 더보기</button>
+            <ul>
+              <li>
+                <a href="" class="notice_list">
+                  <p>
+                    리움미술관 ↔ 호암미술관 셔틀버스 운행 안내: 2024. 9. 3. (화)
+                    ~ 2025. 1. 17. (금)
+                  </p>
+                  <p>2024.08.20.</p>
+                </a>
+              </li>
+              <li>
+                <a href="" class="notice_list">
+                  <p>8.29(목) 임시 휴관 안내</p>
+                  <p>2024.08.12.</p>
+                </a>
+              </li>
+              <li>
+                <a href="" class="notice_list">
+                  <p>주차요금 유료화 시행 안내 (4/5~)</p>
+                  <p>2024.03.12.</p>
+                </a>
+              </li>
+              <li>
+                <a href="" class="notice_list">
+                  <p>
+                    리움미술관 ↔ 호암미술관 셔틀버스 운행 안내: 3.27(수) ~
+                    6.14(금)
+                  </p>
+                  <p>2024.03.08.</p>
+                </a>
+              </li>
+              <li>
+                <a href="" class="notice_list">
+                  <p>2월 설 연휴 휴관일 안내</p>
+                  <p>2024.01.31.</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+      </div>
+    </div>
+    <div class="fix_btns">
+      <!-- pa -->
+      <button class="custom_btn"><i class="fa-solid fa-gear"></i></button>
+      <button class="menu_btn">
+        <i class="bar"></i>
+      </button>
+    </div>
+    <footer>
+      <section>
+        <h4 class="hidden">호암미술관 정보</h4>
+        <dl class="info">
+          <dt>호암미술관</dt>
+          <dd>17021 경기도 용인시 처인구 포곡읍 에버랜드로 562번길 38</dd>
+          <dd>대표전화. 031-320-1801~2</dd>
+        </dl>
+        <div class="sns">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </section>
+      <section>
+        <div class="link_inside">
+          <ul class="link_menu">
+            <li><a href="">미술관 소개</a></li>
+            <li><a href="">공지</a></li>
+            <li><a href="">보도자료</a></li>
+          </ul>
+          <div>
+            <h4><a href="">이메일 문의하기</a></h4>
+            <h4><a href="">개인정보 처리방침</a></h4>
+          </div>
+        </div>
+        <div class="copyright">Ⓒ Hoam Museum of Art, All Rights Reserved.</div>
+        <div class="link_outside">
+          <div class="iso">
+          </div>
+          <div class="family_site">
+            <h4 class="hidden">패밀리 사이트 바로가기</h4>
+            <form action="" method="get">
+              <fieldset>
+                <select name="family_site" id="family_site">
+                  <option selected>패밀리 사이트</option>
+                  <option>삼성재단</option>
+                  <option>WANA</option>
+                  <option>리움미술관</option>
+                </select>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

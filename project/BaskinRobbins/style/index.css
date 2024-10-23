@@ -1,0 +1,529 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+button {
+  border-style: none;
+  background: inherit;
+  padding: 0;
+}
+
+/* 꾸미기 */
+
+body {
+  background-color: #fcf5f8;
+}
+
+#container {
+  width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  width: 400px;
+  padding-bottom: 40px;
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: "Paperlogy-8ExtraBold";
+}
+
+.tab > li {
+  border-radius: 30px 30px 0 0;
+  padding: 20px;
+  width: 25%;
+  color: white;
+  background-color: #db5b99;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+li.tab_on {
+  background-color: #0057a8;
+  font-size: 23px;
+}
+
+.cont {
+  width: 100%;
+  margin-bottom: 150px;
+  box-sizing: border-box;
+}
+
+.cont > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cont .product_wrap {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px 10px 30px 10px;
+}
+
+.cont .product_wrap img {
+  width: 80%;
+}
+
+.changebg {
+  background-color: rgba(248, 212, 240, 0.356);
+  border-radius: 50%;
+}
+
+.info_title {
+  font-weight: 700;
+  color: #db5b99;
+  font-size: 23px;
+}
+
+.info_price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.btn_slide {
+  margin: auto;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.order {
+  margin: auto;
+  position: relative;
+  background-color: white;
+}
+.order_top {
+  padding: 10px 0;
+  text-align: right;
+  border: 3px solid #db5b99;
+  border-radius: 25px 25px 0 0;
+  background-color: aliceblue;
+}
+
+.order_top button {
+  margin-right: 20px;
+}
+
+.order_banner {
+  position: fixed;
+  width: 1400px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: #db5b99;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 35px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* 팝업창 */
+.scroll_hidden {
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.hide {
+  display: none;
+}
+.popup {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+}
+.popup .box {
+  position: absolute;
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 3px 3px 9px 2px #303030;
+}
+
+.popup .box p {
+  font-family: "Paperlogy-8ExtraBold";
+  font-size: 50px;
+  color: #db5b99;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.notice .box p{
+  margin-top: -2%;
+}
+
+.check {
+  font-family: "Paperlogy-8ExtraBold";
+  border-style: none;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 40px;
+  font-size: 33px;
+  margin-top: 55px;
+}
+
+.blank {
+  background-color: #db5b99;
+  width: 100%;
+  height: 70px;
+  border-radius: 25px 25px 0 0;
+  padding-right: 13px;
+  padding-top: 3px;
+  box-sizing: border-box;
+  margin-bottom: 95px;
+}
+
+.small_logo {
+  background: url(../imgs/small_logo.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 65px;
+  height: 65px;
+  margin-left: auto;
+}
+
+.payment > p {
+  padding-top: 20px;
+}
+
+/* 장바구니 */
+.cart_area {
+  display: flex;
+  padding: 20px 0;
+  border-top: 3px solid #db5b99;
+  background-color: rgb(245 239 245);
+  overflow-x: scroll;
+  margin-top: 50px;
+  margin-bottom: 135px;
+}
+
+.cart_area > dl {
+  min-width: 25%;
+  width: 25%;
+  position: relative;
+}
+
+.cart_area > dl img {
+  width: 35%;
+}
+
+.cart img {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart span {
+  background-image: url(../imgs/blueice.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -13px;
+  right: -22px;
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.cart_delet {
+  background-image: url(../imgs/close.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.list > dd:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.num {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  color: #db5b99;
+  font-size: 35px;
+  line-height: 60px;
+}
+
+.btn-sub {
+  background-image: url(../imgs/w_minus.png);
+  background-color: #db5b99;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
+
+.btn-add {
+  background-image: url(../imgs/w_plus.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-color: #db5b99;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
+
+.total_price {
+  display: flex;
+  font-family: "Paperlogy-8ExtraBold";
+  color: white;
+  font-size: 40px;
+  margin-left: 400px;
+  white-space: nowrap;
+}
+
+.total_price > span {
+  margin-left: 10px;
+  display: block;
+  min-width: 200px;
+  border-bottom: 2px solid white;
+}
+
+.btn_pay {
+  background: white;
+  width: 370px;
+  height: 90px;
+  border-radius: 50px;
+  font-family: "Paperlogy-8ExtraBold";
+  font-size: 40px;
+  color: #ff2499;
+  line-height: 90px;
+  white-space: nowrap;
+}
+
+.list {
+  border-right: 2px solid white;
+}
+
+.list > dt {
+  font-size: 23px;
+  font-weight: 400;
+  color: #303030;
+}
+
+.list > dd {
+  font-size: 25px;
+  font-weight: 500;
+  color: #303030;
+}
+
+/* 스크롤 디자인 / */
+.cart_area::-webkit-scrollbar {
+  /* / 전체스크롤 / */
+  height: 25px;
+}
+.cart_area::-webkit-scrollbar-thumb {
+  /* / 스크롤 드래그 부분 / */
+  background: #ff2499;
+  border-radius: 15px;
+}
+.cart_area::-webkit-scrollbar-track {
+  /* / 스크롤 회색바 부분 */
+  background: rgba(220, 20, 60, 0.1);
+}
+
+/* 영수증 디자인 */
+.receipt .receipt_box {
+  position: absolute;
+  z-index: 2000;
+  width: 600px;
+  height: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../imgs/receipt.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.receipt .receipt_close {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background-color: #db5b99;
+  border-radius: 50%;
+  position: absolute;
+  right: -130px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.receipt .receipt_close > span {
+  /* font-family: "yg-jalnan";
+  font-size: 50px;
+  color: #fcf5f8; */
+  background-image: url(../imgs/n_close.png);
+  background-repeat: no-repeat;
+  background-position: 4px 8px;
+  background-size: contain;
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+
+.receipt h2 {
+  font-family: "Paperlogy-8ExtraBold";
+  color: #db5b99;
+  font-size: 65px;
+  text-align: center;
+  padding: 17px 0;
+  margin: auto;
+  width: 560px;
+  border-bottom: 2px dashed #b9b9b9;
+}
+
+.receipt .order_num {
+  font-family: "Paperlogy-8ExtraBold";
+  color: #db5b99;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.receipt .receipt_box > p {
+  text-align: center;
+  /* font-family: "yg-jalnan"; */
+  font-weight: 500;
+  font-size: 25px;
+  color: #555555;
+  position: relative;
+}
+
+.receipt .receipt_box > p::before,
+.receipt_box > p::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 190px;
+  background-color: #555555;
+  position: absolute;
+  top: 50%;
+}
+
+.receipt .receipt_box > p::before{
+  left: 30px;
+}
+
+.receipt .receipt_box > p::after {
+  right: 30px;
+}
+
+.receipt .receipt_box .detail{
+  width: 560px;
+  height: 351px;
+  margin: 0 auto 15px;
+  overflow-y: scroll;
+}
+
+.receipt .receipt_box .detail table{
+  /* font-family: "yg-jalnan"; */
+  color: #303030;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  word-break: keep-all;
+}
+
+.receipt .receipt_box .detail td:first-child{
+  width: 30%;
+}
+
+.receipt .receipt_box .detail td:not(:first-child){
+  width: 20%;
+}
+
+.receipt .receipt_box .detail tr,td{
+  padding: 8px 0;
+  height: fit-content;
+}
+
+.detail::-webkit-scrollbar{
+  width: 15px;
+}
+
+.detail::-webkit-scrollbar-thumb{
+  background: #db5b99;
+  border-radius: 15px;
+}
+
+.detail::-webkit-scrollbar-track{
+  background: rgba(220, 20, 60, 0.1);
+}
+
+.receipt .receipt_box .total{
+  font-family: "Paperlogy-8ExtraBold";
+  font-size: 40px;
+  color: #303030;
+  width: 560px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  text-align: center;
+  border-top: 2px dashed #b9b9b9;
+  border-bottom: 2px dashed #b9b9b9;
+}
+
+.receipt .receipt_box > .logo {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  padding: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.receipt .logo > img {
+  width: 100%;
+}
+
+.receipt .receipt_box .total{
+  line-height: 58px;
+}
+
+.total{
+  display: flex;
+  justify-content: space-between;
+}

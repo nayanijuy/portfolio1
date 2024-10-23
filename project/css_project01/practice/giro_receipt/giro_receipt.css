@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 30px auto;
+  width: 800px;
+}
+
+header, main, footer{
+    padding: 0 30px;
+}
+
+header {
+  border-top: 4px solid #0d90d2;
+  background-color: #eeeeee;
+  height: 70px;
+}
+
+/* float:clearfix 다시보기 */
+header::after{
+    content: '';
+    display: block;
+    clear: left;
+}
+.top_logo {
+  float: left;
+}
+
+.section {
+  float: right;
+  color: #0d90d2;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 70px;
+}
+
+.title::before{
+    content: url(./email_common_ic_type03.gif);
+    vertical-align: middle;
+}
+
+.title{
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p{
+  padding-top: 20px;
+}
+
+p span{
+  color: #0d90d2;
+}
+
+table{
+  margin-top: 10px;
+  border-top: 2px solid #458ce2;
+  border-bottom: 1px solid #458ce2;
+  border-collapse: collapse;
+
+}
+
+th,td{
+  padding: 5px 55px;
+  border-right: 1px solid #e0e0e0;
+}
+
+th:last-child, td:last-child{
+  border-right: none;
+}
+
+th{
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+}
+
+table+p, .notice{
+  font-size: 14px;
+}
+
+table+p{
+  padding-top: 10px;
+}
+
+.link a{
+  background-color: #1c73dd;
+  margin: 40px auto;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 8px;
+}
+
+
+.notice{
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  line-height: 23px;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.company_info{
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.company_info span{
+  font-weight: bold;
+}

@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container>p{
+  text-align: center;
+}
+.container>p>a>img{
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+  display: inline;
+}
+
+a:link {
+  color: #505352;
+  text-decoration: none;
+}
+
+header {
+  border-bottom: 1px solid #5053523f;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+h1, ul {
+  font-weight: lighter;
+  font-size: 25px;
+  margin: 20px;
+}
+
+ul{
+  font-size: 14px;
+}
+
+h1 a img {
+  width: 90px;
+  vertical-align: middle;
+}
+
+header ul li:nth-child(3) a img {
+  width: 30px;
+}
+
+main {
+  width: 500px;
+  margin: 20px auto 80px;
+  padding: 20px;
+  border: 1px solid #5053523f;
+  border-radius: 10px;
+}
+
+main .date span {
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  font-size: 12px;
+  color: white;
+  background-color: #1a73e8;
+  border-radius: 10px;
+}
+
+.date {
+  color: #505352;
+}
+
+.title {
+  font-size: 22px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.email img {
+  width: 20px;
+  vertical-align: middle;
+}
+
+.email {
+  font-size: 12px;
+}
+
+.email + p {
+  font-size: 13px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: 505352;
+}
+
+.place {
+  display: flex;
+}
+
+.img_box {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-image: url(./devices_realistic_72-b9bd1ca60228ef0457a37afb84e72bdd.png);
+  /* 왜안되는거냐???????????????????? */
+  background-position: 0 100;
+}
+.place_txt p {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.place_txt p:first-child {
+  font-weight: bold;
+}
+
+.place + p {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #505352;
+}
+
+.select_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select_box div {
+  text-align: center;
+  border: 1px solid #5053523f;
+  border-radius: 3px;
+  padding: 5px 27px 5px 22px;
+}
+
+.select_box div img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.no a {
+  color: #d93025;
+}
+
+.yes a{
+    color: #1a73e8;
+}
+
+footer {
+  font-size: 13px;
+}
+
+footer ul li a {
+  padding-right: 10px;
+}

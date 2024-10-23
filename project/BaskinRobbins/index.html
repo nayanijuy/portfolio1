@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>배스킨라빈스</title>
+  <link rel="stylesheet" href="./style/common.css" />
+  <link rel="stylesheet" href="./style/index.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/product.js"></script>
+  <script src="./js/tab.js"></script>
+  <script src="./js/order.js"></script>
+</head>
+
+<body>
+  <div class="popup notice hide"><!-- 팝업창-중복안내문 -->
+    <div class="box">
+      <div class="blank">
+        <h1 class="small_logo"></h1>
+      </div>
+      <p>이미 장바구니에 담겨있는 상품입니다. <br>
+        장바구니에서 상품 수량을 확인해주세요.</p>
+      <button class="check">확인</button>
+    </div>
+  </div>
+  <div class="popup receipt hide"><!-- 팝업창-영수증 -->
+    <div class="receipt_box">
+      <div class="receipt_close">
+        <span></span>
+      </div>
+        <h2>RECEIPT</h2>
+      <div class="wrap">
+        <div class="order_num"></div>
+      </div>
+      <p>order list</p>
+      <div class="detail"><table></table></div>
+      <div class="total">
+        <span class="receipt_total"></span>
+        <div>￦ <span class="receipt_amount"></span></div>
+      </div>
+      <div class="logo">
+        <img src="./imgs/logo.png" alt="로고">
+      </div>
+    </div>
+  </div>
+  <div class="popup payment hide"><!-- 팝업창-결제안내문 -->
+    <div class="box">
+      <div class="blank">
+        <h1 class="small_logo"></h1>
+      </div>
+      <p>선택하신 상품이 없습니다.</p>
+      <button class="check">확인</button>
+    </div>
+  </div>
+  <div id="container">
+    <img src="imgs/logo.png" alt="로고" class="logo" />
+    <ul class="tab"></ul>
+    <div class="cont"></div>
+    <div class="order">
+      <div class="cart_area"></div>
+      <div class="order_banner">
+        <div class="cart"><img src="./imgs/cart.png" alt="장바구니"><span></span></div>
+        <div class="total_price">￦<span>0</span> 원</div>
+        <div class="btn_pay">
+          결제하기
+          <img src="./imgs/spoon.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

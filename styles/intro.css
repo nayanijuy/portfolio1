@@ -1,0 +1,465 @@
+@charset "utf-8";
+
+/* *** 포트폴리오 *** */
+
+#container {
+    height:100vh;
+    padding:80px 0 30px 25px;
+}
+
+/* pf01 - 웹 사이트 리디자인 */
+.pf01 {
+    display:none;
+    color:#ecf0f1
+}
+
+.pf01 .design01 {
+    display:flex;
+    align-items:center
+}
+
+.pf01 .desc {
+    width:400px;
+    flex-shrink:0
+}
+
+.pf01 .desc h3 {
+    font-size:2rem;
+}
+
+.pf01 h4 {
+    font-size:1.3rem
+}
+
+.pf01 .tit p {
+    padding:15px 30px 15px 0;
+}
+
+.project-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+    margin-right:30px;
+}
+
+.pf01 .project-links a {
+    display:inline-block;
+    padding:7px 12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    text-align: center;
+    color:#ccc;
+    font-size:0.95rem
+}
+
+.pf01 .project-links a:hover {
+    background-color:#ccc;
+    color:#1a1a1a;
+    font-weight:500
+}
+
+.pf01 .mobile {
+    position:relative;
+    padding:70px 0 50px;
+    overflow:hidden; 
+}
+
+.pf01 .mobile-wrap .swiper-slide {
+    width:320px;
+    flex-shrink:0;
+    position:relative;
+    padding:0 35px;
+}
+
+.pf01 .mobile-wrap dt {
+    width:320px;
+    margin:0 auto;
+    font-size:0.95rem;
+    text-align:center;
+    
+}
+.pf01 .mobile-wrap dt span {
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:20px;
+    font-weight:500;
+    color:#3e3e3e;
+    background-color:#ffffff
+}
+
+.pf01 .mobile-wrap dt span {
+    color:#3e3e3e;
+    font-weight:700;
+    background-color:#ffffff
+}
+.pf01 .mobile-wrap dd {
+    padding-top:7px;
+    text-align:center;
+}
+
+.pf01 .mobile-wrap .img-mask {
+    overflow:hidden;
+    width:320px;
+    height:650px;
+    margin-top:10px;
+    border:10px solid #eaeaea;
+    border-radius:50px;
+    background-color:#fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pf01 .mobile-wrap .img-mask img {
+    width:100%;
+}
+
+.pf01 .mobile .pagination-wrap {
+    position:absolute;left:0; bottom:0;
+    width:100%; height:5px;
+}
+.pf01 .mobile .swiper-pagination {
+    width:30%;
+    height:3px;
+    background-color:rgba(255, 255, 255, 0.3);
+    border-radius:5px;
+    position:relative; left:50%;
+    transform:translateX(-50%);
+}
+
+.pf01 .mobile .swiper-pagination-progressbar {
+    background-color:rgba(255, 255, 255, 0.3);
+}
+
+/* 모달 - 최종 디자인 시안 */
+.pf01 .modal-backdrop {
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.85);
+    z-index:100;
+}
+
+.pf01 .modal-mockup {
+    width:1440px;
+    margin:0 auto;
+    color:#3e3e3e;
+    background-color:#f1f1f1;
+}
+
+.pf01 .modal-mockup .head {
+    position:relative; z-index:100;
+    display:flex;
+    align-items:center;
+    font-weight:500;
+    height:60px;
+    padding:0 40px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pf01 .modal-mockup .head h1 {
+    font-size:1.4rem;
+    margin-right:70px;
+    color:#1a1a1a
+}
+
+.pf01 .modal-mockup .side-nav {
+    display:flex
+}
+
+.pf01 .modal-mockup .side-nav li {
+    position:relative;
+    height:60px;
+    line-height:60px;
+    margin-right:40px;
+    cursor:pointer;
+}
+
+.pf01 .modal-mockup .side-nav li::after {
+    content:'';
+    display:none;
+    position:absolute; left:0; bottom:0;
+    width:100%; 
+    height:5px;
+    background-color:#3498db
+}
+
+.pf01 .modal-mockup .side-nav li.on::after {
+    display:block;    
+}
+
+.pf01 .modal-mockup .site-link {
+    margin-left:auto
+}
+
+.pf01 .modal-mockup .site-link a {
+    display:inline-block;
+    padding:5px 40px 5px 20px ;
+    border-radius:20px;
+    background:#e0e3e6 url(../imgs/common/icon-new-window.png) no-repeat 92% 50%;
+    background-size:20px
+}
+
+.pf01 .modal-mockup .site-link a:hover {
+    color:#fff;
+    background-color:#3e3e3e
+}
+
+.pf01 .modal-backdrop .contents {
+    overflow-y:auto;
+    padding:20px 30px;
+    max-height:calc(100vh - 60px)
+}
+
+.pf01 .modal-mockup .page {
+    display:none
+}
+.pf01 .modal-mockup .page.on {
+    display:flex
+}
+
+.pf01 .modal-mockup .contents .mo {
+    flex:0 0 360px;
+    margin-right:20px;
+}
+
+.pf01 .modal-mockup img {
+    width:100%;
+    border-radius:20px;
+}
+
+.pf01 .modal-backdrop .btn-close {
+    position:fixed; right:20px; top:20px;
+    cursor:pointer;
+}
+
+.pf01 .modal-backdrop .btn-close img {
+    width:45px
+}
+
+/* 모달 - UI 컴포넌트 보기 영역 */
+.pf01 .modal-backdrop.components {
+    display:none;
+}
+
+.pf01 .modal-components {
+    display:flex;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    
+    color:#3e3e3e;
+    
+}
+
+.pf01 .modal-components .contents {
+    width:75%;
+    max-width:1440px;
+    height:75vh;
+    background-color:#f1f1f1;
+    overflow:hidden;
+    border-radius:30px;
+}
+
+.pf01 .modal-components .contents h1 {
+    font-size:1.4rem;
+    margin-right:70px;
+    color:#1a1a1a
+}
+
+.pf01 .modal-components .img-mask {
+    width:95%;
+    max-width:1300px;
+    margin:0 auto
+}
+
+.pf01 .modal-components .img-mask img {
+    /* 이미지 1300x600px 정도로 디자인하면 되겠어요~ */
+}
+
+
+/* pf02 - 웹 콘텐츠 디자인 */
+/* > 카드뉴스 */
+.pf02 { 
+    display:flex;
+    padding-right:25px;
+}
+.pf02 > ul {
+    width:25%;
+}
+.pf02 > ul > li {
+    position:relative;
+    margin:0 10px 20px;
+    opacity:0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pf02 > ul > li::after {
+    content:"";
+    position:absolute;left:0;top:0;
+    width:100%;
+    height:100%;
+    border:1px solid #1a1a1a;
+    opacity:0.2;
+    box-sizing:border-box;
+}
+
+.pf02 > ul > li.show {
+    opacity:1;
+}
+
+.pf02 img {width:100%;}
+
+.pf02 .news {
+    position:relative;
+    overflow:hidden;
+}
+
+.pf02 li.news h3 {
+    position:absolute;left:10px;top:10px;
+    z-index:20;
+    padding:7px;
+    color:#fff;
+    font-weight:500;
+    background-color:rgba(0, 0, 0, 0.7)
+}
+
+.pf02 .news ul {
+    display:flex;
+    background-color:aliceblue
+}
+
+.pf02 .news li {
+    overflow:hidden;
+    flex:0 0 100%;
+}
+.pf02 .news li img {width:100%}
+
+.pf02 .news .custom-pagination {
+    position:absolute;left:0;bottom:10px;
+    z-index:20;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* aboutme */
+.aboutme {
+    position:fixed;left:0;top:0;
+    width:100%;
+    height:100vh;
+    background-color:#ccc    
+}
+
+.aboutme .inner-wrap {
+    width:1000px;
+    margin:0 auto;
+    padding-top:70px;
+}
+
+.aboutme .inner {
+    border-radius:10px;
+    background-color:#fff;
+    height:calc(100vh - 90px);
+    overflow-y:auto;
+    padding:100px 40px 50px;
+    font-weight:400
+}
+
+.aboutme .inner .group {
+    margin-bottom:150px
+}
+
+.aboutme .inner .group:last-child {
+    margin-bottom:30px
+}
+
+.aboutme .inner .group .desc {
+    margin-bottom:15px;
+    font-size:1.2rem;
+    font-weight:500;
+}
+
+.aboutme .inner .group01 {
+    display:flex;
+    align-items:center;
+    gap:30px
+}
+
+.aboutme .inner .group01 .pic {
+    flex:0 0 270px;
+    height:270px;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.aboutme .inner .group01 dd {
+    margin-bottom:10px
+}
+
+.aboutme .inner .group01 strong {
+    display:inline-block;
+    width:50px;
+    margin-right:10px;
+    text-align:right;
+    color:#9b9b9b
+}
+
+.aboutme .inner .group01 .course {
+    padding-left:60px
+}
+
+
+
+.aboutme .inner .group02 .desc {
+    margin-bottom:30px;
+    text-align:center
+}
+
+.aboutme .inner .group02 div {
+    display:flex;
+    align-items:center;
+}
+
+.aboutme .inner .group02 .pic {
+    flex:0 0 500px;
+    height:270px;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.aboutme .inner .group02 .keyword {
+    padding:0 50px;
+}
+
+.aboutme .inner .group02 .keyword span {
+    display:inline-block;
+    padding:5px 15px;
+    margin:0 5px 5px 0;
+    background-color:#9b9b9b;
+    color:#fff;
+    border-radius:15px;
+    font-size:1rem
+}
+
+.aboutme .inner .group03 dl.first {
+    border-top:1px solid #eaecee;
+}
+
+.aboutme .inner .group03 dl {
+    padding:20px 25px;
+    border-bottom:1px solid #eaecee;
+}
+
+.aboutme .inner .group03 dt {
+    font-size:1.1rem;
+    color:#3e3e3e;
+    font-weight:500;
+}
+
+.aboutme .inner .group03 dd.finish {
+    font-size:0.9rem;
+    color:#9b9b9b;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디데이계산하기</title>
+    <style>
+      /* 종강일 디데이 카운트 */
+      .class_dday_box {
+        border: 0.5rem solid green;
+        border-radius: 1rem;
+        width: fit-content;
+        padding: 1rem;
+        margin: 2rem auto;
+        text-align: center;
+      }
+      div {
+        margin-bottom: 1rem;
+      }
+
+      .class_dday_box > div + div + div {
+        font-size: 2rem;
+        font-weight: bold;
+        color: tomato;
+      }
+
+      .wrap{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      /* 디데이 계산기 */
+      .calculater_box {
+        text-align: center;
+      }
+
+      fieldset {
+        width: fit-content;
+        padding: 1rem;
+        margin: 2rem auto;
+        border-radius: 1rem;
+        border: 0.3rem solid orange;
+        text-align: center;
+      }
+
+      .wrap legend{
+        font-size: 1.5rem;
+        padding: 15px;
+        font-weight: bold;
+      }
+      .wrap{
+        margin: auto;
+      }
+
+      .calculate_resalt_box {
+        width: 20rem;
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: coral;
+      }
+
+      .wrap button{
+        background-image: url(imgs/dday/free-icon-calculating-360679.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+        background-color: none;
+        text-indent: -9999px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+
+      .calculater_box label{
+        display: block;
+        margin: 0 auto 10px;
+      }
+      .count_day p{
+        margin: 0 auto 10px;
+      }
+      .count_day_result{
+        width: 20rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="class_dday_box">
+      <div>TODAY : <span id="today"></span></div>
+      <div>학원 종강일 : 2024년 10월 17일</div>
+      <div>🎊D-DAY : <span id="D-day"></span>🎊</div>
+    </div>
+    <div class="wrap">
+      <div class="calculater_box">
+        <!-- <form action="#" method="post"> -->
+        <fieldset>
+          <legend>D-day 계산기</legend>
+          <label for="inputdate">계산할 날짜를 입력하세요.</label>
+          <input type="date" id="inputdate" />
+          <button onclick="btnDday()">계산하기</button>
+          <div class="calculate_resalt_box"></div>
+        </fieldset>
+        <!-- </form> -->
+      </div>
+      <div class="count_day">
+        <!-- <form action="#" method="get"> -->
+          <fieldset>
+            <legend>오늘부터 OO일 후는???</legend>
+            <p>오늘은 <span class="count_day_today"></span>입니다!!!</p>
+            <input type="number" id="target_num" placeholder="숫자만 입력하세요." />일<button onclick="calculate()">계산하기</button>
+            <p class="count_day_result"></p>
+          </fieldset>
+        <!-- </form> -->
+      </div>
+    </div>
+    <script>
+      // 종강일 디데이 카운트
+      const todayBox = document.getElementById("today");
+      const Dday = document.getElementById("D-day"); // 출력할 곳
+
+      const TODAY = new Date(); // 오늘 날짜 설정
+      const thisYear = TODAY.getFullYear(); // 년
+      const thisMonth = TODAY.getMonth() + 1; // 월
+      const thisDate = TODAY.getDate(); // 일
+      // console.log(thisMonth);
+      todayBox.innerHTML = thisYear + "년 " + thisMonth + "월 " + thisDate + "일";
+
+      function find_day() {
+        const today = new Date(); // 오늘 날짜 설정
+        const findDay = new Date("2024-10-17 00:00:00"); // 디데이 설정
+        // console.log(findDay);
+        const gap = findDay - today; // 디데이 계산 //밀리세컨드 단위의 시간 표시 1초=1000
+        // console.log(gap);
+        const day = Math.floor(gap / (1000 * 60 * 60 * 24)); // 일 계산
+        // console.log(day);
+        const hour = Math.floor((gap / (1000 * 60 * 60)) % 24); // 시간 계산
+        // console.log(hour);
+        const min = Math.floor((gap / (1000 * 60)) % 60); // 분 계산
+        // console.log(min);
+        const sec = Math.floor((gap / 1000) % 60); // 초 계산
+        // console.log(sec);
+        Dday.innerHTML = day + "일 " + hour + "시간 " + min + "분 " + sec + "초";
+      }
+
+      find_day();
+      setInterval(find_day, 1000); //setInterval 함수를 주기적으로 실행 // ~함수를 주기적으로 실행해라.(함수 find_day를, 1000ms마다)
+    </script>
+    <script>
+      // 디데이 계산기
+      function btnDday() {
+        const today = new Date();
+        const inputDate = document.querySelector("#inputdate").value;
+        // console.log(inputDate);
+        // console.log(typeof inputDate);
+        // console.log(today);
+        // console.log(typeof today);
+
+        const dayday = new Date("2024-08-29");
+        // console.log(dayday);
+        // console.log(typeof dayday);
+
+        const targetDate = new Date(inputDate);
+        // console.log(targetDate);
+        // console.log(typeof targetDate);
+
+        const calculaterGap = today - targetDate;
+        //console.log(calculaterGap);
+        //console.log("-----------------------------");
+
+        const targetDay = Math.floor(calculaterGap / (1000 * 60 * 60 * 24));
+        // console.log(targetDay);
+
+        const calculateResalt = document.getElementsByClassName("calculate_resalt_box")[0];
+        if (targetDay == 0) {
+          calculateResalt.innerHTML = "D-DAY!!!!!! 오늘이닷!!!!!!";
+        } else if (targetDay > 0) {
+          calculateResalt.innerHTML = targetDay + "일 지났습니다~";
+        } else {
+          calculateResalt.innerHTML = -targetDay + "일 남았습니다~";
+        }
+      }
+    </script>
+    <script>
+      // 오늘로부터 몇일뒤는?
+      // 오늘 날짜 출력
+      const countDayToday = document.getElementsByClassName("count_day_today")[0];
+      countDayToday.innerHTML = thisYear + "년 " + thisMonth + "월 " + thisDate + "일";
+
+      // 날짜계산
+      function calculate() {
+        let targetNum = Number(document.getElementById("target_num").value);
+        //console.log(targetNum);
+        //console.log(typeof targetNum);
+
+        const countDate = new Date(); // 오늘날짜
+        countDate.setDate(countDate.getDate() + targetNum); // 직역하면 : countDate 날짜를 설정(countDate의 날짜를 가져와서 targetNum을 더해라)
+        console.log(countDate);
+        countMonth = countDate.getMonth() + 1;
+
+        const countDayResult = document.getElementsByClassName("count_day_result")[0];
+        countDayResult.innerHTML = countDate.getFullYear() + "년 " + countMonth + "월 " + countDate.getDate() + "일";
+      }
+    </script>
+  </body>
+</html>
